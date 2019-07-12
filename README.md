@@ -5,7 +5,7 @@ Overwatch PUG BOT for 6v6s and 2v2s.
 No license was included in this project for a reason. Do not download and run this code - although you may view it through github. 
 
 ## About
-Overwatch PUG BOT was made in two weeks and aimed to add some sort of "server-like" framework to Overwatch, a game known to be devoid of proper private servers. The bot works entirely off of screen reading and analysis as well as keyboard/ mouse hooks. To achieve desired results, Google's Tesseract OCR neural network was used. 
+This project is very old and was one of the first Python application I properly wrote. Of course there are many code inaccuracies as I was (relatively) new to Python and this happened to be one of the most "unexpectedly" bloated projects I've ever completed. Overwatch PUG BOT was made in two weeks and aimed to add some sort of "server-like" framework to Overwatch, a game known to be devoid of proper private servers. The bot works entirely off of screen reading and analysis as well as keyboard/ mouse hooks. To achieve desired results, Google's Tesseract OCR neural network was used. 
 
 ## What does the bot running look like?
 In some ways, it is quite similar to something like ESEA in terms of what players experience. The bot will start and is set to begin at the Overwatch main menu screen. It navigates over to the custom games section and creates a game with a specific PUG-warmup preset. It then invites the players who will play into the game. 
