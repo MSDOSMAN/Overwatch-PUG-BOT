@@ -1,0 +1,21 @@
+ def Execute_Result_Processing(self):
+        #rpObj = ResultProcessing()
+        #TopHalf = threading.Thread(target=rpObj.FirstHalf, args=())
+        #BottomHalf = threading.Thread(target=rpObj.SecondHalf, args=())
+
+        while Bridge.WinnerFound == False:
+            rpObj = ResultProcessing()
+            TopHalf = threading.Thread(target=rpObj.FirstHalf, args=())
+            BottomHalf = threading.Thread(target=rpObj.SecondHalf, args=())
+
+            TopHalf.start()
+            BottomHalf.start()
+            TopHalf.join()
+            BottomHalf.join()
+
+            rpObj.ImageSkew()
+            Bridge.WinnerFound = rpObj.WinnerOCR()  # we might need to multithread so that the rate of winner analysis is greater
+            # I think we should actually multithread this for better accuray later.
+            # I think we have to multithread this so that it is faster to pickup who won
+            # Copy the code in this function, out into 7 others. Then start the reads in here.
+            # Make sure to lock Bride.WinnerFound!
